@@ -7,12 +7,12 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install dependencies
 RUN apt-get update && \
     apt-get install -y openvpn curl apache2 php libapache2-mod-php php-mysql php-curl php-json php-mbstring php-xml php-zip supervisor \
-    && libpq-dev zip unzip git \
+    libpq-dev zip unzip git \
     && docker-php-ext-install pdo pdo_pgsql \
     && pecl install mailparse \
     && docker-php-ext-enable mailparse \
     # gd
-    && apt-get install -y build-essential nginx openssl libfreetype6-dev libjpeg-dev libpng-dev libwebp-dev zlib1g-dev libzip-dev libicu-dev gcc g++ make vim unzip curl git jpegoptim optipng pngquant gifsicle locales libonig-dev  \
+    && apt-get install -y build-essential nginx openssl libfreetype6-dev libjpeg-dev libpng-dev libwebp-dev zlib1g-dev libzip-dev libicu-dev gcc g++ make nano jpegoptim optipng pngquant gifsicle locales libonig-dev  \
     && docker-php-ext-configure gd  \
     && docker-php-ext-install gd \
     # gmp
