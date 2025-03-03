@@ -5,7 +5,7 @@ USER root
 
 # Install dependencies
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends openvpn curl apache2 libapache2-mod-php supervisor \
+    apt-get install -y --no-install-recommends openvpn curl supervisor \
     libpq-dev zip unzip git \
     && docker-php-ext-install pdo pdo_pgsql \
     && pecl install mailparse \
