@@ -1,6 +1,6 @@
 # Base image
 FROM ubuntu:22.04
-
+USER root
 # Set environment variables to avoid interactive prompts
 ENV DEBIAN_FRONTEND=noninteractive
 
