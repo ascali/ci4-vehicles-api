@@ -6,9 +6,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install dependencies
 RUN apt-get update && \
-    apt-get install -y openvpn curl apache2 php libapache2-mod-php php-mysql php-curl php-json php-mbstring php-xml php-zip supervisor \
+    apt-get install -y openvpn curl apache2 php8.4 libapache2-mod-php8.4 php8.4-mysql php8.4-curl php8.4-json php8.4-mbstring php8.4-xml php8.4-zip supervisor \
     libpq-dev zip unzip git \
-    && docker-php-ext-install pdo pdo_pgsql \
     && pecl install mailparse \
     && docker-php-ext-enable mailparse \
     # gd
@@ -21,8 +20,7 @@ RUN apt-get update && \
     && docker-php-ext-enable opcache \
     && docker-php-ext-install gmp pdo mbstring exif sockets pcntl bcmath \
     # khusus ci
-    && docker-php-ext-install pdo_mysql mysqli zip intl \
-    && apt-get clean
+    && docker-php-ext-install pdo_mysql mysqli zip intl
 
 # Set timezone
 RUN ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime && \
