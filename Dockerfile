@@ -6,11 +6,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install dependencies
 RUN apt-get update && \
-    apt-get install -y openvpn curl apache2 php libapache2-mod-php php-mysql php-curl php-json php-mbstring php-xml php-zip supervisor
-
-# Install required extensions, OpenSSL, and Certbot
-RUN apt-get update && apt-get install -y \
-    libpq-dev zip unzip git \
+    apt-get install -y openvpn curl apache2 php libapache2-mod-php php-mysql php-curl php-json php-mbstring php-xml php-zip supervisor \
+    && libpq-dev zip unzip git \
     && docker-php-ext-install pdo pdo_pgsql \
     && pecl install mailparse \
     && docker-php-ext-enable mailparse \
