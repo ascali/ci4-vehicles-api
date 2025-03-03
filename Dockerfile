@@ -22,13 +22,11 @@ WORKDIR /var/www/html
 COPY . .
 
 # Set permissions for CI4
-RUN chown -R www-data:www-data /var/www/html && \
-    chmod -R 755 /var/www/html
+RUN chown -R www-data:www-data /var/www/html && chmod -R 775 /var/www/html/writable && chmod -R 775 /var/www/html/public
 
 # Configure Apache to serve CI4
-RUN a2enmod rewrite && \
-    sed -i 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/000-default.conf && \
-    echo "ServerName localhost" >> /etc/apache2/apache2.conf
+COPY apache.conf /etc/apache2/sites-available/000-default.conf
+RUN a2enmod rewrite ssl # Enable SSL module
 
 # Configure supervisord
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf

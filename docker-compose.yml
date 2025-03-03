@@ -10,9 +10,8 @@ services:
     devices:
       - /dev/net/tun
     ports:
-      - "80:8080"
-    volumes:
-      - ./:/var/www/html/
+      - "80:80"
+      - "443:443"
     environment:
       - DB_HOST=192.168.49.102
       - DB_NAME=gps_bus_db
