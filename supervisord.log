@@ -1,0 +1,84 @@
+2025-03-03 15:20:02,460 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-03-03 15:20:02,475 INFO supervisord started with pid 1
+2025-03-03 15:20:03,590 INFO spawned: 'apache2' with pid 7
+2025-03-03 15:20:03,645 INFO spawned: 'openvpn' with pid 8
+2025-03-03 15:20:05,178 INFO success: apache2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:20:05,180 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:20:12,046 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:20:13,088 INFO spawned: 'openvpn' with pid 16
+2025-03-03 15:20:14,318 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:20:20,591 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:20:21,610 INFO spawned: 'openvpn' with pid 17
+2025-03-03 15:20:22,737 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:20:31,883 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:20:32,905 INFO spawned: 'openvpn' with pid 18
+2025-03-03 15:20:34,008 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:20:40,602 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:20:41,662 INFO spawned: 'openvpn' with pid 19
+2025-03-03 15:20:42,810 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:20:48,971 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:20:50,022 INFO spawned: 'openvpn' with pid 20
+2025-03-03 15:20:51,170 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:20:57,303 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:20:58,357 INFO spawned: 'openvpn' with pid 22
+2025-03-03 15:20:59,446 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:21:05,995 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:21:07,034 INFO spawned: 'openvpn' with pid 23
+2025-03-03 15:21:08,163 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:21:14,713 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:21:15,747 INFO spawned: 'openvpn' with pid 24
+2025-03-03 15:21:16,961 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:21:23,671 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:21:24,696 INFO spawned: 'openvpn' with pid 25
+2025-03-03 15:21:25,814 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:21:32,938 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:21:33,956 INFO spawned: 'openvpn' with pid 26
+2025-03-03 15:21:35,942 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:21:40,089 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:21:41,105 INFO spawned: 'openvpn' with pid 27
+2025-03-03 15:21:41,106 WARN received SIGTERM indicating exit request
+2025-03-03 15:21:41,111 INFO waiting for apache2, openvpn to die
+2025-03-03 15:21:44,171 INFO waiting for apache2, openvpn to die
+2025-03-03 15:21:46,176 WARN received SIGTERM indicating exit request
+2025-03-03 15:21:47,180 INFO waiting for apache2, openvpn to die
+2025-03-03 15:21:48,554 INFO stopped: openvpn (exit status 0)
+2025-03-03 15:21:49,595 INFO stopped: apache2 (terminated by SIGTERM)
+2025-03-03 15:28:56,002 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-03-03 15:28:56,124 INFO supervisord started with pid 1
+2025-03-03 15:28:57,135 INFO spawnerr: can't find command '/usr/sbin/apache2ctl'
+2025-03-03 15:28:57,706 INFO spawned: 'openvpn' with pid 7
+2025-03-03 15:28:58,184 INFO spawnerr: can't find command '/usr/sbin/apache2ctl'
+2025-03-03 15:28:58,193 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:29:00,722 INFO spawnerr: can't find command '/usr/sbin/apache2ctl'
+2025-03-03 15:29:03,873 INFO spawnerr: can't find command '/usr/sbin/apache2ctl'
+2025-03-03 15:29:03,904 INFO gave up: apache2 entered FATAL state, too many start retries too quickly
+2025-03-03 15:29:11,561 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:29:12,688 INFO spawned: 'openvpn' with pid 8
+2025-03-03 15:29:14,285 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:29:22,004 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:29:23,172 INFO spawned: 'openvpn' with pid 9
+2025-03-03 15:29:24,493 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:29:31,012 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:29:32,316 INFO spawned: 'openvpn' with pid 10
+2025-03-03 15:29:33,688 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:29:39,998 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:29:41,062 INFO spawned: 'openvpn' with pid 11
+2025-03-03 15:29:42,122 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:29:49,560 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:29:50,746 INFO spawned: 'openvpn' with pid 12
+2025-03-03 15:29:52,160 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:29:58,690 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:29:59,882 INFO spawned: 'openvpn' with pid 13
+2025-03-03 15:30:01,402 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:30:07,895 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:30:07,923 INFO spawned: 'openvpn' with pid 14
+2025-03-03 15:30:08,960 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:30:16,621 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:30:17,686 INFO spawned: 'openvpn' with pid 15
+2025-03-03 15:30:18,912 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:30:25,213 INFO exited: openvpn (exit status 0; expected)
+2025-03-03 15:30:26,249 INFO spawned: 'openvpn' with pid 16
+2025-03-03 15:30:27,407 INFO success: openvpn entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-03-03 15:30:27,415 WARN received SIGTERM indicating exit request
+2025-03-03 15:30:27,433 INFO waiting for openvpn to die
+2025-03-03 15:30:28,446 INFO stopped: openvpn (exit status 0)
