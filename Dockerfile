@@ -1,5 +1,5 @@
 # Base image
-FROM php:8.4-apache
+FROM php:8.2-apache
 
 USER root
 
