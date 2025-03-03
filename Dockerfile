@@ -1,12 +1,11 @@
 # Base image
-FROM ubuntu:22.04
+FROM php:8.4-apache
+
 USER root
-# Set environment variables to avoid interactive prompts
-ENV DEBIAN_FRONTEND=noninteractive
 
 # Install dependencies
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends openvpn curl apache2 php libapache2-mod-php php-mysql php-curl php-json php-mbstring php-xml php-zip supervisor \
+    apt-get install -y --no-install-recommends openvpn curl apache2 libapache2-mod-php php-mysql php-curl php-json php-mbstring php-xml php-zip supervisor \
     libpq-dev zip unzip git \
     && docker-php-ext-install pdo pdo_pgsql \
     && pecl install mailparse \
@@ -19,11 +18,7 @@ RUN apt-get update && \
     && docker-php-ext-enable opcache \
     && docker-php-ext-install gmp pdo mbstring exif sockets pcntl bcmath \
     # khusus ci
-    && docker-php-ext-install pdo_mysql mysqli zip intl 
-
-# Set timezone
-RUN ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime && \
-    dpkg-reconfigure -f noninteractive tzdata
+    && docker-php-ext-install pdo_mysql mysqli zip intl
 
 # Copy OpenVPN configuration and auth file
 COPY vpn-config.ovpn /etc/openvpn/vpn-config.ovpn
