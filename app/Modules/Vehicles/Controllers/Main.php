@@ -1,9 +1,11 @@
-<?php
+<?php namespace App\Modules\Vehicles\Controllers;
 
-namespace App\Controllers;
+use CodeIgniter\Controller;
+use App\Core\BaseController;
+use App\Modules\Vehicles\Models\MainModel;
 use CodeIgniter\HTTP\ResponseInterface;
 
-class Home extends BaseController
+class Main extends BaseController
 {
     protected $db;
 
@@ -12,9 +14,14 @@ class Home extends BaseController
         $this->db = \Config\Database::connect();
     }
 
-    public function index(): string
+    public function index(): ResponseInterface
     {
-        return view('welcome_message');
+        return $this->response->setJSON([
+            'status_code' => 200,
+            'error' => false,
+            'message' => "Welcome to bus AKAP REST API",
+            'data' => []
+        ]);
     }
 
     public function home(): ResponseInterface

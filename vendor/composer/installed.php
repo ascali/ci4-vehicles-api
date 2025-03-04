@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'codeigniter4/framework',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '8b3442f803cf85858c4979210750169fb2a2ca9f',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -29,9 +29,9 @@
             'dev_requirement' => true,
         ),
         'codeigniter4/framework' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '8b3442f803cf85858c4979210750169fb2a2ca9f',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -92,9 +92,9 @@
             'dev_requirement' => true,
         ),
         'friendsofphp/php-cs-fixer' => array(
-            'pretty_version' => 'v3.70.1',
-            'version' => '3.70.1.0',
-            'reference' => 'add1b3a05256392dbad63875240041b2c0349ceb',
+            'pretty_version' => 'v3.70.2',
+            'version' => '3.70.2.0',
+            'reference' => '1ca468270efbb75ce0c7566a79cca8ea2888584d',
             'type' => 'application',
             'install_path' => __DIR__ . '/../friendsofphp/php-cs-fixer',
             'aliases' => array(),

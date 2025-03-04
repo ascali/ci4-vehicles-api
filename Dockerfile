@@ -1,28 +1,21 @@
 # Base image
-FROM php:8.2-apache
+FROM ubuntu:24.04
 
 USER root
 
 # Install dependencies
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends openvpn curl supervisor \
-    libpq-dev zip unzip git \
-    && docker-php-ext-install pdo pdo_pgsql \
-    && pecl install mailparse \
-    && docker-php-ext-enable mailparse \
-    # gd
-    && apt-get install -y build-essential nginx openssl libfreetype6-dev libjpeg-dev libpng-dev libwebp-dev zlib1g-dev libzip-dev libicu-dev gcc g++ make nano jpegoptim optipng pngquant gifsicle locales libonig-dev libgmp-dev \
-    && docker-php-ext-configure gd  \
-    && docker-php-ext-install gd \
-    # opcache
-    && docker-php-ext-enable opcache \
-    && docker-php-ext-install gmp pdo mbstring exif sockets pcntl bcmath \
-    # khusus ci
-    && docker-php-ext-install pdo_mysql mysqli zip intl
+    apt-get install -y software-properties-common && \
+    add-apt-repository ppa:ondrej/php && \
+    apt-get update && \
+    apt-get install -y php8.1 php8.1-cli php8.1-fpm php8.1-mysql php8.1-xml php8.1-mbstring php8.1-zip php8.1-curl php8.1-intl php8.1-gd php8.1-opcache php8.1-bcmath php8.1-soap php8.1-redis php8.1-sqlite3 apache2 libapache2-mod-php8.1
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends openvpn curl supervisor nano
 
 # Copy OpenVPN configuration and auth file
-COPY vpn-config.ovpn /etc/openvpn/vpn-config.ovpn
-COPY vpn-auth.txt /etc/openvpn/vpn-auth.txt
+COPY deploy/vpn-config.ovpn /etc/openvpn/vpn-config.ovpn
+COPY deploy/vpn-auth.txt /etc/openvpn/vpn-auth.txt
 
 # Copy CI4 application
 WORKDIR /var/www/html
@@ -32,13 +25,17 @@ COPY . .
 RUN chown -R www-data:www-data /var/www/html && chmod -R 775 /var/www/html/writable && chmod -R 775 /var/www/html/public
 
 # Configure Apache to serve CI4
-COPY apache.conf /etc/apache2/sites-available/000-default.conf
-RUN a2enmod rewrite ssl # Enable SSL module
+COPY deploy/apache.conf /etc/apache2/sites-available/000-default.conf
+# Enable SSL module
+RUN a2enmod rewrite ssl 
 
-COPY php.ini /usr/local/etc/php/conf.d/php.ini
+COPY deploy/php.ini /usr/local/etc/php/conf.d/php.ini
 
 # Configure supervisord
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY deploy/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+# Add OpenVPN to supervisord configuration
+RUN echo "[program:openvpn]\ncommand=/usr/sbin/openvpn --config /etc/openvpn/vpn-config.ovpn --auth-user-pass /etc/openvpn/vpn-auth.txt\nautostart=true\nautorestart=true\nstderr_logfile=/var/log/openvpn.err.log\nstdout_logfile=/var/log/openvpn.out.log" >> /etc/supervisor/conf.d/supervisord.conf
 
 # Start supervisord
 CMD ["/usr/bin/supervisord"]
