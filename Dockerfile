@@ -10,7 +10,8 @@ RUN apt-get update && \
     apt-get update && \
     apt-get install -y php8.1 php8.1-cli php8.1-fpm php8.1-mysql php8.1-xml php8.1-mbstring php8.1-zip php8.1-curl php8.1-intl php8.1-gd php8.1-opcache php8.1-bcmath php8.1-soap php8.1-redis php8.1-sqlite3 apache2 libapache2-mod-php8.1 openvpn curl supervisor nano && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    a2enmod rewrite
 
 # Copy OpenVPN configuration and auth file
 COPY deploy/vpn-config.ovpn /etc/openvpn/vpn-config.ovpn
@@ -22,7 +23,7 @@ WORKDIR /var/www/html
 COPY . .
 
 # Set permissions for CI4
-RUN chown -R www-data:www-data /var/www/html && chmod -R 775 /var/www/html && chmod -R 777 /var/www/html/writable
+RUN chown -R www-data:www-data /var/www/html && chmod -R 775 /var/www/html && chmod -R 775 /var/www/html/writable
 
 # Configure Apache to serve CI4
 COPY deploy/apache.conf /etc/apache2/sites-available/000-default.conf
@@ -35,5 +36,8 @@ COPY deploy/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 # Add OpenVPN to supervisord configuration
 RUN echo "[program:openvpn]\ncommand=/usr/sbin/openvpn --config /etc/openvpn/vpn-config.ovpn --auth-user-pass /etc/openvpn/vpn-auth.txt\nautostart=true\nautorestart=true\nstderr_logfile=/var/log/openvpn.err.log\nstdout_logfile=/var/log/openvpn.out.log" >> /etc/supervisor/conf.d/supervisord.conf
 
+# Add Apache to supervisord configuration
+RUN echo "[program:apache2]\ncommand=/usr/sbin/apachectl -D FOREGROUND\nautostart=true\nautorestart=true\nstderr_logfile=/var/log/apache2.err.log\nstdout_logfile=/var/log/apache2.out.log" >> /etc/supervisor/conf.d/supervisord.conf
+
 # Start supervisord
-CMD ["/usr/bin/supervisord"]
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
