@@ -33,7 +33,7 @@ COPY deploy/php.ini /usr/local/etc/php/conf.d/php.ini
 COPY deploy/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Add OpenVPN to supervisord configuration
-# RUN echo "[program:openvpn]\ncommand=/usr/sbin/openvpn --config /etc/openvpn/vpn-config.ovpn --auth-user-pass /etc/openvpn/vpn-auth.txt\nautostart=true\nautorestart=true\nstderr_logfile=/var/log/openvpn.err.log\nstdout_logfile=/var/log/openvpn.out.log" >> /etc/supervisor/conf.d/supervisord.conf
+RUN echo "[program:openvpn]\ncommand=/usr/sbin/openvpn --config /etc/openvpn/vpn-config.ovpn --auth-user-pass /etc/openvpn/vpn-auth.txt\nautostart=true\nautorestart=true\nstderr_logfile=/var/log/openvpn.err.log\nstdout_logfile=/var/log/openvpn.out.log" >> /etc/supervisor/conf.d/supervisord.conf
 
 # Start supervisord
-# CMD ["/usr/bin/supervisord"]
+CMD ["/usr/bin/supervisord"]
