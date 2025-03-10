@@ -8,7 +8,7 @@ RUN apt-get update && \
     apt-get install -y software-properties-common && \
     add-apt-repository ppa:ondrej/php && \
     apt-get update && \
-    apt-get install -y php8.1 php8.1-cli php8.1-fpm php8.1-mysql php8.1-xml php8.1-mbstring php8.1-zip php8.1-curl php8.1-intl php8.1-gd php8.1-opcache php8.1-bcmath php8.1-soap php8.1-redis php8.1-sqlite3 apache2 libapache2-mod-php8.1 curl nano && \
+    apt-get install -y php8.3 php8.3-cli php8.3-fpm php8.3-mysql php8.3-xml php8.3-mbstring php8.3-zip php8.3-curl php8.3-intl php8.3-gd php8.3-opcache php8.3-bcmath php8.3-soap php8.3-redis php8.3-sqlite3 apache2 libapache2-mod-php8.3 curl nano && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     a2enmod rewrite

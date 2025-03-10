@@ -1,0 +1,62 @@
+version: '3.3'
+services:
+  app:
+    image: ghcr.io/ascali/test-data-gps:latest
+    environment:
+      CI_DEBUG: 'true'
+      CI_ENVIRONMENT: development
+      app.baseURL: 'http://staging-app.nginovasi.id/api/'
+      database.default.hostname: 103.59.95.133
+      database.default.port: '3306'
+      database.default.database: thishub
+      database.default.username: thishub
+      database.default.password: hcPWaD3ASLbq6Ry
+      database.default.DBDriver: MySQLi
+    networks:
+     - staging-app
+     - traefik-public
+    logging:
+      driver: json-file
+    deploy:
+      replicas: 2
+      labels:
+        traefik.http.middlewares.staging-app-https.redirectscheme.scheme: https
+        traefik.http.middlewares.staging-app-header.headers.accesscontrolmaxage: '100'
+        traefik.http.middlewares.staging-app-header.headers.featurepolicy: camera 'none';geolocation
+          'none'; microphone 'none'; payment 'none'; usb 'none';
+        traefik.http.routers.staging-app.middlewares: staging-app-https, staging-app-header
+        traefik.http.middlewares.staging-app-header.headers.contenttypenosniff: 'true'
+        traefik.http.middlewares.staging-app-header.headers.customresponseheaders.X-Robots-Tag: none,noarchive,nosnippet,notranslate,noimageindex
+        traefik.http.middlewares.staging-app-header.headers.addvaryheader: 'true'
+        traefik.http.middlewares.staging-app-header.headers.sslproxyheaders.X-Forwarded-Proto: https
+        traefik.http.middlewares.staging-app-header.headers.sslredirect: 'true'
+        traefik.http.middlewares.staging-app-header.headers.stsincludesubdomains: 'true'
+        traefik.http.routers.staging-app.rule: Host(`staging-app.nginovasi.id`) && PathPrefix(`/api`)
+        traefik.http.middlewares.staging-app-header.headers.stspreload: 'true'
+        traefik.http.middlewares.staging-app-header.headers.stsseconds: '63072000'
+        traefik.http.routers.staging-app.tls: 'true'
+        traefik.constraint-label: traefik-public
+        traefik.http.middlewares.staging-app-header.headers.hostsproxyheaders: X-Forwarded-Host
+        traefik.http.middlewares.staging-app-header.headers.browserxssfilter: 'true'
+        traefik.docker.lbswarm: 'true'
+        traefik.http.middlewares.staging-app-header.headers.framedeny: 'true'
+        traefik.http.middlewares.staging-app-header.headers.accesscontrolallowmethods: GET,
+          OPTIONS, PUT, POST, PATCH, DELETE, HEAD
+        traefik.http.middlewares.staging-app-header.headers.contentsecuritypolicy: frame-ancestors
+          'self' https://staging-app.nginovasi.id
+        traefik.http.services.staging-app.loadbalancer.server.port: '80'
+        traefik.docker.network: traefik-public
+        traefik.enable: 'true'
+        traefik.http.middlewares.staging-app-header.headers.referrerpolicy: same-origin
+        traefik.http.middlewares.staging-app-header.headers.forcestsheader: 'true'
+        traefik.http.routers.staging-app.entrypoints: websecure
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints:
+         - node.labels.deploy_cluster == vm_staging
+networks:
+  staging-app:
+    driver: overlay
+  traefik-public:
+    external: true
