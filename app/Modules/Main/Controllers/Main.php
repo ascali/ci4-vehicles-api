@@ -10,7 +10,7 @@ class Main extends Controller
         return $this->response->setJSON([
             'status_code' => 200,
             'error' => false,
-            'message' => "Welcome to bus AKAP REST API",
+            'message' => "Welcome to API",
             'data' => []
         ]);
     }

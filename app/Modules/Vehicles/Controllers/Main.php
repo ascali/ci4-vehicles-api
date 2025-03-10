@@ -19,7 +19,7 @@ class Main extends BaseController
         return $this->response->setJSON([
             'status_code' => 200,
             'error' => false,
-            'message' => "Welcome to bus AKAP REST API",
+            'message' => "Welcome to API",
             'data' => []
         ]);
     }
@@ -29,7 +29,7 @@ class Main extends BaseController
         return $this->response->setJSON([
             'status_code' => 200,
             'error' => false,
-            'message' => "Welcome to bus AKAP REST API",
+            'message' => "Welcome to API",
             'data' => []
         ]);
     }
@@ -41,12 +41,31 @@ class Main extends BaseController
         $offset = ($page - 1) * $limit;
         $sort = $this->request->getVar('sort') ?? 'ASC';
 
+        $id = $this->request->getVar('id');
+        $gps_sn = $this->request->getVar('gps_sn');
+        $nomor_kendaraan = $this->request->getVar('nomor_kendaraan');
+        $route_type = $this->request->getVar('route_type') ?? 'AKAP';
+
+        if ($id) {
+            $whereClause = "id = ?";
+            $whereValue = $id;
+        } elseif ($gps_sn) {
+            $whereClause = "gps_sn = ?";
+            $whereValue = $gps_sn;
+        } elseif ($nomor_kendaraan) {
+            $whereClause = "nomor_kendaraan = ?";
+            $whereValue = $nomor_kendaraan;
+        } else {
+            $whereClause = "route_type = ?";
+            $whereValue = $route_type;
+        }
+
         $data = $this->db->query("SELECT `id`, `gps_sn`, `route_type`, `nomor_kendaraan`, `nomor_kendaraan_clean`, `name_sender`, `name_client`, 
             `region`, `route`, `date_tracker`, `date_tracker_original`, `date_tracker_timestamp`, `timezone`, `acc`, `speed`, 
             `latitude`, `longitude`, `altitude`, `angle`, `odometer`, `address`, `battery_level`, `signal`, `gps_valid`, `created_at`, `updated_at`
-            FROM vehicles WHERE route_type = ? 
+            FROM vehicles WHERE $whereClause AND route_type = ? 
             ORDER BY id $sort LIMIT ? OFFSET ?", 
-            ['AKAP', $limit, $offset])->getResult();
+            [$whereValue, $route_type, $limit, $offset])->getResult();
 
         return $this->response->setJSON([
             'status_code' => 200,
@@ -66,6 +85,7 @@ class Main extends BaseController
         $id = $this->request->getVar('id');
         $gps_sn = $this->request->getVar('gps_sn');
         $nomor_kendaraan = $this->request->getVar('nomor_kendaraan');
+        $route_type = $this->request->getVar('route_type') ?? 'AKAP';
 
         if ($id) {
             $whereClause = "id = ?";
@@ -90,7 +110,7 @@ class Main extends BaseController
             `latitude`, `longitude`, `altitude`, `angle`, `odometer`, `address`, `battery_level`, `signal`, `gps_valid`, `created_at`, `updated_at`
             FROM vehicle_logs WHERE $whereClause AND route_type = ? 
             ORDER BY id $sort LIMIT ? OFFSET ?", 
-            [$whereValue, 'AKAP', $limit, $offset])->getResult();
+            [$whereValue, $route_type, $limit, $offset])->getResult();
 
         return $this->response->setJSON([
             'status_code' => 200,
