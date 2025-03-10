@@ -17,6 +17,7 @@ $routes->group('api', ['namespace' => 'App\Modules\Main\Controllers'], function 
         $subroutes->get('bus', 'Vehicle::bus');
         $subroutes->get('log_bus', 'Vehicle::log_bus');
         $subroutes->group('webhook', static function ($subroutes) {
+            $subroutes->post('log', 'Vehicle::log_data_hooks');
             $subroutes->post('data', 'Vehicle::webhook_data');
             $subroutes->get('hit', 'Vehicle::hit_webhook');
         });
