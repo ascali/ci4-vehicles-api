@@ -119,4 +119,142 @@ class Main extends BaseController
             'data' => $data
         ]);
     }
+
+    public function log_data_hooks(): ResponseInterface
+    {
+        $limit = $this->request->getGet('limit') ?? 10;
+        $page = $this->request->getGet('page') ?? 1;
+        $offset = ($page - 1) * $limit;
+        $sort = $this->request->getGet('sort') ?? 'ASC';
+
+        $id = $this->request->getGet('id');
+        $data = $this->request->getGet('data');
+
+        if ($id) {
+            $whereClause = "id = ?";
+            $whereValue = $id;
+        } elseif ($data) {
+            $whereClause = "data LIKE ?";
+            $whereValue = '%' . $data . '%';
+        } else {
+            $whereClause = '1 = ?';
+            $whereValue = '1';
+        }
+
+        $data = $this->db->query("SELECT `id`, `data`
+            FROM data_hooks WHERE $whereClause 
+            ORDER BY id $sort LIMIT ? OFFSET ?", 
+            [$whereValue, $limit, $offset])->getResult();
+
+        return $this->response->setJSON([
+            'status_code' => 200,
+            'error' => false,
+            'message' => "Successfully fetched data hooks",
+            'data' => $data
+        ]);
+    }
+
+    public function webhook_data() {
+        $postData = $this->request->getJSON(true);
+        $data = [
+            'data' => json_encode($postData)
+        ];
+
+        $this->db->transStart();
+        try {
+            // Set a shorter timeout for the transaction
+            $this->db->query('SET SESSION wait_timeout = 5');
+            $this->db->query('SET SESSION interactive_timeout = 5');
+
+            $this->db->table('data_hooks')->insert($data);
+            $insertId = $this->db->insertID();
+            $data = json_decode($data['data'], true);
+            $data['predata'] = $data;
+            $data['id'] = $insertId;
+
+            $this->db->transComplete();
+            if ($this->db->transStatus() === false) {
+                throw new \Exception('Transaction failed');
+            }
+
+            return $this->response->setJSON([
+                'status_code' => 200,
+                'error' => false,
+                'message' => "Successfully",
+                'data' => $data
+            ]);
+        } catch (\Exception $e) {
+            $this->db->transRollback();
+            return $this->response->setJSON([
+                'status_code' => 500,
+                'error' => true,
+                'message' => "Internal Server Error: " . $e->getMessage()
+            ], 500);
+        }
+    }
+
+    public function hit_webhook() {
+
+        $newDate = date('Y-m-d H:i:s');
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => 'http://host.docker.internal:5005/ingest/3cY0rqGcuNHeTklU',
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => '',
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 0,
+          CURLOPT_FOLLOWLOCATION => true,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => 'POST',
+          CURLOPT_POSTFIELDS =>'{
+                "gps_sn": "SN123456",
+                "route_type": "AKAP",
+                "nomor_kendaraan": "B1234XYZ",
+                "nomor_kendaraan_clean": "B1234XYZ",
+                "name_sender": "Sender1",
+                "name_client": "Client1",
+                "region": "Region1",
+                "route": "Route1",
+                "date_tracker": "'.$newDate.'",
+                "date_tracker_original": "'.$newDate.'",
+                "date_tracker_timestamp": "'.$newDate.'",
+                "timezone": "UTC+7",
+                "acc": true,
+                "speed": 60.5,
+                "latitude": -6.2,
+                "longitude": 106.816666,
+                "altitude": 50.0,
+                "angle": 90.0,
+                "odometer": 1200.5,
+                "address": "Address1",
+                "battery_level": 75.0,
+                "signal": 4,
+                "gps_valid": true
+            }',
+          CURLOPT_HTTPHEADER => array(
+            'Content-Type: application/json'
+          ),
+        ));
+        
+        $response = curl_exec($curl);
+
+        if ($response === false) {
+            $error = curl_error($curl);
+            curl_close($curl);
+            return $this->response->setJSON([
+                'status_code' => 500,
+                'error' => true,
+                'message' => "cURL Error: " . $error
+            ], 500);
+        }
+
+        curl_close($curl);
+
+        return $this->response->setJSON([
+            'status_code' => 200,
+            'error' => false,
+            'message' => "Successfully",
+            'data' => json_decode($response, true)
+        ]);
+    }
 }
