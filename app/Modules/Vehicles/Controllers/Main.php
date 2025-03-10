@@ -197,8 +197,9 @@ class Main extends BaseController
 
         $newDate = date('Y-m-d H:i:s');
         $curl = curl_init();
+        //   CURLOPT_URL => 'http://host.docker.internal:5005/ingest/3cY0rqGcuNHeTklU',
         curl_setopt_array($curl, array(
-          CURLOPT_URL => 'http://host.docker.internal:5005/ingest/3cY0rqGcuNHeTklU',
+          CURLOPT_URL => 'http://103.186.1.46:5005/ingest/K3KxnEScZmvfBjHh',
           CURLOPT_RETURNTRANSFER => true,
           CURLOPT_ENCODING => '',
           CURLOPT_MAXREDIRS => 10,
