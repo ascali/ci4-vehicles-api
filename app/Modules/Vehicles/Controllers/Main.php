@@ -36,15 +36,15 @@ class Main extends BaseController
 
     public function bus(): ResponseInterface
     {
-        $limit = $this->request->getVar('limit') ?? 10;
-        $page = $this->request->getVar('page') ?? 1;
+        $limit = $this->request->getGet('limit') ?? 10;
+        $page = $this->request->getGet('page') ?? 1;
         $offset = ($page - 1) * $limit;
-        $sort = $this->request->getVar('sort') ?? 'ASC';
+        $sort = $this->request->getGet('sort') ?? 'ASC';
 
-        $id = $this->request->getVar('id');
-        $gps_sn = $this->request->getVar('gps_sn');
-        $nomor_kendaraan = $this->request->getVar('nomor_kendaraan');
-        $route_type = $this->request->getVar('route_type') ?? 'AKAP';
+        $id = $this->request->getGet('id');
+        $gps_sn = $this->request->getGet('gps_sn');
+        $nomor_kendaraan = $this->request->getGet('nomor_kendaraan');
+        $route_type = $this->request->getGet('route_type') ?? 'AKAP';
 
         if ($id) {
             $whereClause = "id = ?";
@@ -77,15 +77,15 @@ class Main extends BaseController
 
     public function log_bus(): ResponseInterface
     {
-        $limit = $this->request->getVar('limit') ?? 10;
-        $page = $this->request->getVar('page') ?? 1;
+        $limit = $this->request->getGet('limit') ?? 10;
+        $page = $this->request->getGet('page') ?? 1;
         $offset = ($page - 1) * $limit;
-        $sort = $this->request->getVar('sort') ?? 'ASC';
+        $sort = $this->request->getGet('sort') ?? 'ASC';
 
-        $id = $this->request->getVar('id');
-        $gps_sn = $this->request->getVar('gps_sn');
-        $nomor_kendaraan = $this->request->getVar('nomor_kendaraan');
-        $route_type = $this->request->getVar('route_type') ?? 'AKAP';
+        $id = $this->request->getGet('id');
+        $gps_sn = $this->request->getGet('gps_sn');
+        $nomor_kendaraan = $this->request->getGet('nomor_kendaraan');
+        $route_type = $this->request->getGet('route_type') ?? 'AKAP';
 
         if ($id) {
             $whereClause = "id = ?";
