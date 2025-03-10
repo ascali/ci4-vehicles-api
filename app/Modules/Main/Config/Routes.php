@@ -13,11 +13,12 @@ $routes->group('api', ['namespace' => 'App\Modules\Main\Controllers'], function 
 
     $subroutes->group('vehicle', static function ($subroutes) {
         $subroutes->get('', 'Vehicle::index');
-        $subroutes->get('(:any)', 'Vehicle::$1');
-    
+        // $subroutes->get('(:any)', 'Vehicle::$1');
+        $subroutes->get('bus', 'Vehicle::bus');
+        $subroutes->get('log_bus', 'Vehicle::log_bus');
         $subroutes->group('webhook', static function ($subroutes) {
-            $subroutes->post('data', 'Vehicles::webhook_data');
-            $subroutes->get('hit', 'Vehicles::hit_webhook');
+            $subroutes->post('data', 'Vehicle::webhook_data');
+            $subroutes->get('hit', 'Vehicle::hit_webhook');
         });
     });
 
