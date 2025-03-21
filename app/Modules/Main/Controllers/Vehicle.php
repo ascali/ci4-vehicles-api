@@ -143,7 +143,7 @@ class Vehicle extends BaseController
         $data = $this->db->query("SELECT `id`, `data`
             FROM data_hooks WHERE $whereClause 
             ORDER BY id $sort LIMIT ? OFFSET ?", 
-            [$whereValue, $limit, $offset])->getResult();
+            [$whereValue, (int)$limit, (int)$offset])->getResult();
 
         return $this->response->setJSON([
             'status_code' => 200,
