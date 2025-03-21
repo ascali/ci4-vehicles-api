@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Jalan dan Fasilitas Provinsi Jatim 2</name>
+	<gx:CascadingStyle kml:id="__managed_style_22959F8E432F94577F55">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.0.26.0/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>6</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_159C4C03FD2F94577F55">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.0.26.0/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_00E5831D422F94577F55">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_159C4C03FD2F94577F55</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_22959F8E432F94577F55</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark id="0C5AB5DB882F94572DD9">
+		<name>Jalan Provinsi JATIM 4</name>
+		<description><![CDATA[<div>Test&nbsp;Jalan Provinsi JATIM 4<br></div>]]></description>
+		<LookAt>
+			<longitude>112.6429758762179</longitude>
+			<latitude>-7.299385781253275</latitude>
+			<altitude>14.94928372054771</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99988908</gx:fovy>
+			<range>169494.353091605</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_00E5831D422F94577F55</styleUrl>
+		<LineString>
+			<coordinates>
+				112.5947901501246,-7.180604923426761,0 112.5947900259605,-7.197869555155155,0 112.5752475651374,-7.223711622639668,0 112.5691440776973,-7.244243807678671,0 112.5442186700701,-7.290772305622048,0 112.5448245133502,-7.31123862410922,0 112.5352886088743,-7.335638433587734,0 112.5319034682412,-7.360684749059872,0 112.5339180225088,-7.38057307402111,0 112.5546303324175,-7.392701193190939,0 112.5542060462717,-7.427979429239338,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark id="079B273BB82F9457B710">
+		<name>Jalan Provinsi JATIM 5</name>
+		<description><![CDATA[<div>Test&nbsp;Jalan Provinsi JATIM 5<br></div>]]></description>
+		<LookAt>
+			<longitude>112.6429758652476</longitude>
+			<latitude>-7.299385775814264</latitude>
+			<altitude>14.94928251951122</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99988908</gx:fovy>
+			<range>169494.353091605</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_00E5831D422F94577F55</styleUrl>
+		<LineString>
+			<coordinates>
+				112.6072115476961,-7.122498706222153,0 112.6031148429504,-7.137401017559132,0 112.6001866479821,-7.160019206272755,0 112.6059340627151,-7.173877037877673,0 112.6247286387874,-7.192853093086797,0 112.6433989149369,-7.211353873066452,0 112.6622769777625,-7.235356039420683,0 112.6912392568063,-7.244037650755199,0 112.7117679610722,-7.24677177800756,0 112.7214669441017,-7.246769510710786,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark id="03BD91962A2F9458623A">
+		<name>Jalan Provinsi JATIM 6</name>
+		<description><![CDATA[<div><i>Test&nbsp;</i>Jalan Provinsi JATIM 6</div>]]></description>
+		<LookAt>
+			<longitude>112.6429758652476</longitude>
+			<latitude>-7.299385775814264</latitude>
+			<altitude>14.94928251951122</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99988908</gx:fovy>
+			<range>169494.353091605</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_00E5831D422F94577F55</styleUrl>
+		<LineString>
+			<coordinates>
+				112.7280278081674,-7.224816182706723,0 112.7124932615873,-7.251752267895144,0 112.7124980256346,-7.283379052480443,0 112.6954973897186,-7.292999463055198,0 112.6991344514629,-7.309993595726874,0 112.7165962052527,-7.311001861863118,0 112.7199016148368,-7.323172270269128,0 112.7158445725412,-7.349035516318749,0 112.7548896089992,-7.346610540562892,0 112.7926550525118,-7.347361305519583,0 112.8087075577217,-7.356684535241767,0 112.7975279852296,-7.375922063033039,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark id="02491600E92F9458CA93">
+		<name>Pombensin PERTAMINA 1</name>
+		<description><![CDATA[<div>test&nbsp;Pombensin PERTAMINA 1<br></div>]]></description>
+		<LookAt>
+			<longitude>112.6429758542774</longitude>
+			<latitude>-7.299385770375257</latitude>
+			<altitude>14.94928131847473</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99988908</gx:fovy>
+			<range>169494.353091605</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_00E5831D422F94577F55</styleUrl>
+		<Point>
+			<coordinates>112.5637199983821,-7.411348226320176,16.02597206569829</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="09D64AECA32F945930B2">
+		<name>Pombensin PERTAMINA 2</name>
+		<description><![CDATA[<div>Pombensin PERTAMINA 2 test<br></div>]]></description>
+		<LookAt>
+			<longitude>112.6429758542774</longitude>
+			<latitude>-7.299385770375257</latitude>
+			<altitude>14.94928131847473</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99988908</gx:fovy>
+			<range>169494.353091605</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_00E5831D422F94577F55</styleUrl>
+		<Point>
+			<coordinates>112.5244868458458,-7.3595569109562,49.98519948939198</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="09A41910FC2F94599257">
+		<name>Pombensin PERTAMINA 3</name>
+		<description><![CDATA[<div>test Pombensin PERTAMINA 3<br></div>]]></description>
+		<LookAt>
+			<longitude>112.6429758542774</longitude>
+			<latitude>-7.299385770375257</latitude>
+			<altitude>14.94928131847473</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99988908</gx:fovy>
+			<range>169494.353091605</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_00E5831D422F94577F55</styleUrl>
+		<Point>
+			<coordinates>112.5685482225805,-7.277766868299015,12.70928154401812</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="06F95D6B392F9459E261">
+		<name>Fasilitas RSUD JATIM 1</name>
+		<description><![CDATA[<div>test&nbsp;Fasilitas RSUD JATIM 1<br></div>]]></description>
+		<LookAt>
+			<longitude>112.6429758542774</longitude>
+			<latitude>-7.299385770375257</latitude>
+			<altitude>14.94928131847473</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99988908</gx:fovy>
+			<range>169494.353091605</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_00E5831D422F94577F55</styleUrl>
+		<Point>
+			<coordinates>112.5348578488551,-7.300935242989576,14.76961339712491</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="01870E150D2F945A28D9">
+		<name>RM Dekat  PANTAI</name>
+		<description><![CDATA[<div>Test RM Dekat&nbsp; PANTAI<br></div>]]></description>
+		<LookAt>
+			<longitude>112.6429758542774</longitude>
+			<latitude>-7.299385770375257</latitude>
+			<altitude>14.94928131847473</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99988908</gx:fovy>
+			<range>169494.353091605</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_00E5831D422F94577F55</styleUrl>
+		<Point>
+			<coordinates>112.6557899731507,-7.206343721835859,23.84342615525404</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="02326563BB2F945A82B9">
+		<name>Tempat WISATA TENGAH KOTA</name>
+		<description><![CDATA[<div>Test Tempat WISATA TENGAH KOTA<br></div>]]></description>
+		<LookAt>
+			<longitude>112.6429758542774</longitude>
+			<latitude>-7.299385770375257</latitude>
+			<altitude>14.94928131847473</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99988908</gx:fovy>
+			<range>169494.353091605</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_00E5831D422F94577F55</styleUrl>
+		<Point>
+			<coordinates>112.731084699839,-7.251489232074474,14.89378477599502</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0AB208F4142F945AD5D4">
+		<name>Tempat WISATA Dekat Pantai</name>
+		<description><![CDATA[<div>test&nbsp;Tempat WISATA Dekat Pantai<br></div>]]></description>
+		<LookAt>
+			<longitude>112.6429758542774</longitude>
+			<latitude>-7.299385770375257</latitude>
+			<altitude>14.94928131847473</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99988908</gx:fovy>
+			<range>169494.353091605</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_00E5831D422F94577F55</styleUrl>
+		<Point>
+			<coordinates>112.8239492430705,-7.352915403618598,18.78563117681693</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>

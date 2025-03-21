@@ -1,17 +1,17 @@
-name: Deploy Test Data GPS Apps
+name: Deploy Staging Apps
 
 on:
   push:
     branches:
       - staging
 env:
-  IMAGE_NAME: test-data-gps
+  IMAGE_NAME: staging-app
   GHCR_REGISTRY: ghcr.io
   GHCR_USERNAME: ${{ secrets.GHCR_USERNAME }}
   GHCR_PAT: ${{ secrets.GHCR_PAT }}
   DEPLOY_URL: ${{ secrets.DEPLOY_URL }}
   API_TOKEN: ${{ secrets.API_TOKEN }}
-  STACK_STAGING: test-data-gps-staging
+  STACK_STAGING: staging-app
   IMAGE_TAG: latest
 
 jobs:

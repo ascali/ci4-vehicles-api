@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>jalan dan fasilitas provinsi jatim</name>
+	<gx:CascadingStyle kml:id="__managed_style_127396F0C92F91D97B1F">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.0.26.0/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=66bb6a&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_2DB181C5082F91D8D73E">
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ffd27619</color>
+				<width>12</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_1F448C2D8C2F91D8D73E">
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ffd27619</color>
+				<width>8</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_043B784D382F91D8D73E">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1F448C2D8C2F91D8D73E</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2DB181C5082F91D8D73E</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="__managed_style_01531EA3FA2F91D77715">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_153C5D14F52F91D77715</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_252051E7392F91D77715</styleUrl>
+		</Pair>
+	</StyleMap>
+	<gx:CascadingStyle kml:id="__managed_style_2A126484042F91D705E3">
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff58eeff</color>
+				<width>12</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_098A7775C52F91D6A1EA">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1C7D66434E2F91D6A1EA</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_093C67547F2F91D6A1EB</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="__managed_style_091B2781312F91D705E3">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_13FCB2F5552F91D705E3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2A126484042F91D705E3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<gx:CascadingStyle kml:id="__managed_style_1E5CA854B12F91D83941">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.0.26.0/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=7b1fa2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_0B2686A3F32F91D97B20">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.0.26.0/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=66bb6a&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>6</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_08C0D7ECAB2F91D97B1F">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_127396F0C92F91D97B1F</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_0B2686A3F32F91D97B20</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="__managed_style_0DD876D51F2F91D83941">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1E5CA854B12F91D83941</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_23DBFC548D2F91D83941</styleUrl>
+		</Pair>
+	</StyleMap>
+	<gx:CascadingStyle kml:id="__managed_style_153C5D14F52F91D77715">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.0.26.0/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=d32f2f&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_23DBFC548D2F91D83941">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.0.26.0/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=7b1fa2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>6</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_13FCB2F5552F91D705E3">
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff58eeff</color>
+				<width>8</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_252051E7392F91D77715">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.0.26.0/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=d32f2f&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>6</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_093C67547F2F91D6A1EB">
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff007cf5</color>
+				<width>12</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_1C7D66434E2F91D6A1EA">
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff007cf5</color>
+				<width>8</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<Placemark id="0349104DD12F91D65332">
+		<name>jalan provinsi 1</name>
+		<LookAt>
+			<longitude>112.7640587776584</longitude>
+			<latitude>-7.641320028042453</latitude>
+			<altitude>-42.63657826424151</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99988907726935</gx:fovy>
+			<range>513287.291302979</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_098A7775C52F91D6A1EA</styleUrl>
+		<LineString>
+			<coordinates>
+				113.2958935888059,-7.796797801403066,0 113.3208961288473,-7.83591718520738,0 113.2309419131849,-7.836493285833261,0 113.1637641334626,-7.807573712527656,0 113.1145008508449,-7.756000149213305,0 113.0340898827226,-7.748363426758401,0 112.9607159442519,-7.701972735811182,0 112.8643856375565,-7.64688341978456,0 112.7365594645522,-7.59990440499636,0 112.7216443847668,-7.573342538628502,0 112.6757977049812,-7.55160780124996,0 112.699450091775,-7.481712710845216,0 112.6988651648198,-7.427574945121481,0 112.7088337430675,-7.356604518260725,0 112.7141812926022,-7.319258313829882,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark id="00A91C33A72F91D6D2FE">
+		<name>jalan provinsi 2</name>
+		<LookAt>
+			<longitude>112.7640587776584</longitude>
+			<latitude>-7.641320028042453</latitude>
+			<altitude>-42.63657826424151</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99988907726935</gx:fovy>
+			<range>513287.291302979</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_091B2781312F91D705E3</styleUrl>
+		<LineString>
+			<coordinates>
+				112.7180302284899,-7.578526084456714,0 112.7046629760558,-7.704828053728377,0 112.7356165797197,-7.821274296207863,0 112.6946504899567,-7.900628261294407,0 112.6653974163526,-7.957884467990917,0 112.7264553597737,-8.004825856387187,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark id="09CE2C93452F91D72748">
+		<name>Fasilitas 1 A</name>
+		<description><![CDATA[<div>Test</div>]]></description>
+		<LookAt>
+			<longitude>112.7640587776584</longitude>
+			<latitude>-7.641320028042453</latitude>
+			<altitude>-42.63657826424151</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99988907726935</gx:fovy>
+			<range>513287.291302979</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01531EA3FA2F91D77715</styleUrl>
+		<Point>
+			<coordinates>112.7393650071444,-7.389244539968819,204.915694200981</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0C9A427BD02F91D7C9AA">
+		<name>Fasilitas 2 A</name>
+		<description><![CDATA[<div>test fasilitas 2</div>]]></description>
+		<LookAt>
+			<longitude>112.7640587114008</longitude>
+			<latitude>-7.641319995191609</latitude>
+			<altitude>-42.63658368446685</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99988907726935</gx:fovy>
+			<range>513287.2913029791</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0DD876D51F2F91D83941</styleUrl>
+		<Point>
+			<coordinates>112.6698968496284,-7.880238598261849,574.5047244697065</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0A5A060B502F91D8C249">
+		<name>Jalan provinsi jatim 3</name>
+		<LookAt>
+			<longitude>112.7640587114008</longitude>
+			<latitude>-7.641319995191609</latitude>
+			<altitude>-42.63658368446685</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99988907726935</gx:fovy>
+			<range>513287.2913029791</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_043B784D382F91D8D73E</styleUrl>
+		<LineString>
+			<coordinates>
+				112.6989536327845,-7.352607165535557,0 112.6127839088792,-7.359491651460614,0 112.4995640207228,-7.391802519707027,0 112.3995596709542,-7.45134453614209,0 112.3727180598881,-7.501440573843073,0 112.2170127993085,-7.510631632243791,0 112.1269108174831,-7.588302254309183,0 111.9361112540566,-7.601448019684694,0 111.8341467646976,-7.536731325610552,0 111.7578793011673,-7.569481844822695,0 111.6377877858986,-7.519920423015769,0 111.5386118202584,-7.564041011005724,0 111.4194788527377,-7.426936912607671,0 111.1518241610941,-7.38474884546698,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark id="01C40B590D2F91D91C71">
+		<name>Fasilitas 3 A</name>
+		<description><![CDATA[<div>test&nbsp;Fasilitas 3 A<br></div>]]></description>
+		<LookAt>
+			<longitude>112.7640586451434</longitude>
+			<latitude>-7.641319962340766</latitude>
+			<altitude>-42.63658910610684</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99988907726935</gx:fovy>
+			<range>513287.2913029791</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_08C0D7ECAB2F91D97B1F</styleUrl>
+		<Point>
+			<coordinates>111.5584986372016,-7.528268901006908,83.51498450291865</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>

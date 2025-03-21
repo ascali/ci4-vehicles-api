@@ -1,0 +1,51 @@
+{
+    "error": false,
+    "message": "Successfully",
+    "status_code": 200,
+    "data": {
+        "crs": {
+            "type": "name",
+            "properties": {
+                "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+            }
+        },
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              110.74027995040251,
+              -6.51182169672866
+            ]
+          },
+          "properties": {
+            "test1": 1,
+            "test2": 2,
+            "kategori": "asdasd",
+            "name": "apa"
+          },
+          "id": 0
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              110.85873269693695,
+              -6.426888681114875
+            ]
+          },
+          "properties": {
+            "test3": 3,
+            "test4": 4,
+            "test5": 5,
+            "kategori": "asdasd2",
+            "name": "apa2"
+          },
+          "id": 1
+        }
+      ]
+    }
+}
