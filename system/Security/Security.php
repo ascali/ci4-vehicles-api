@@ -259,8 +259,8 @@ class Security implements SecurityInterface
 
         // Do the tokens match?
         if (! isset($token, $this->hash) || ! hash_equals($this->hash, $token)) {
-            // return;
             // throw SecurityException::forDisallowedAction();
+            // log_message('info', 'the tokens ! match');
         }
 
         $this->removeTokenInRequest($request);

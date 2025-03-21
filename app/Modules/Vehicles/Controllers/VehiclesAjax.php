@@ -23,30 +23,33 @@ class VehiclesAjax extends BaseController
     public function total_camera() {
         $data =[];
         $camera = $this->db->query("SELECT COUNT(*) as total FROM cameras WHERE is_deleted = 0")->getRow();
+        $data['status_code'] = 200;
         $data['status'] = true;
         $data['message'] = "Success";
         $data['data'] = $camera;
         $this->response->setHeader('Content-Type', 'application/json');
-		echo json_encode($data);
+        return $this->response->setJSON($data);
     }
 
     public function total_camera_terkoneksi() {
         $data =[];
         $camera = $this->db->query("SELECT COUNT(*) as total_connect FROM cameras WHERE active = 1 AND is_deleted = 0")->getRow();
+        $data['status_code'] = 200;
         $data['status'] = true;
         $data['message'] = "Success";
         $data['data'] = $camera;
         $this->response->setHeader('Content-Type', 'application/json');
-		echo json_encode($data);
+		return $this->response->setJSON($data);
     }
 
     public function total_camera_tidak_terkoneksi() {
         $data =[];
         $camera = $this->db->query("SELECT COUNT(*) as total_not_connect FROM cameras WHERE active != 1 AND is_deleted = 0")->getRow();
+        $data['status_code'] = 200;
         $data['status'] = true;
         $data['message'] = "Success";
         $data['data'] = $camera;
         $this->response->setHeader('Content-Type', 'application/json');
-		echo json_encode($data);
+		return $this->response->setJSON($data);
     }
 }
