@@ -72,7 +72,6 @@
                                     <th>Lokasi</th>
                                     <th>Latitude</th>
                                     <th>Longitude</th>
-                                    <th>Url Streaming</th>
                                     <th class="column-2action"></th>
                                 </tr>
                             </thead>
@@ -302,13 +301,6 @@
 				width: 100,
 				className: 'text-start align-middle',
 			},
-			{
-				data: "url_streaming",
-				title: "Url Streaming",
-				orderable: true,
-				width: 100,
-				className: 'text-start align-middle',
-			},
             {
                 data: "id",
                 title: null,
@@ -317,6 +309,7 @@
                 className: 'text-center align-middle',
                 render: function(a, type, data, index) {
                     let button = ''
+                    button += `<a href="${data.url_streaming}" class="btn btn-sm btn-outline-success" data-id="${data.id}" target="_blank" title="Streaming Kamera"><i class="fa fa-camera"></i></a>`;
                     if (auth_edit == "1") {
                         button += `<button class="btn btn-sm btn-outline-primary edit" data-id="${data.id}" title="Edit"><i class="fa fa-edit"></i></button>`;
                     }
